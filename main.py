@@ -1,15 +1,12 @@
 import time
-import gspread
-from oauth2client.service_account import ServiceAccountCredentials
+import sheet_editor
 
-scope = ['https://www.googleapis.com/auth/spreadsheets', "https://www.googleapis.com/auth/drive.file", "https://www.googleapis.com/auth/drive"]
-creds = ServiceAccountCredentials.from_json_keyfile_name('hydroponicssheets-8ae54978587b.json', scope)
-client = gspread.authorize(creds)
-hydroponicssheet = client.open("[hydroponics] Information for cool people").worksheet("main")
+print("Starting...")
+x = 1
+while x < 10:
+    id = sheet_editor.push_data(x, -1.0)
+    print("Updated ID#:",id)
+    time.sleep(2)
+    x = x+1
 
-#hydroponicssheet.update_cell(row, column, "content")
-hydroponicssheet.update_cell(5,5,"New Test!!!")
-hydroponicssheet.update_cell(5,6,"New Test!!!")
-
-value = hydroponicssheet.cell(1,1).value
-print(value)
+print("Done!")

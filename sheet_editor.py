@@ -21,6 +21,7 @@ def give_sheet_connection():
     hydroponicssheet = client.open("[hydroponics] Information for cool people").worksheet("main")
     return hydroponicssheet
 
+# updates info given in parameters to google sheet then returns that rows id
 def push_data(ph, ppm):
     hydroponicssheet = give_sheet_connection()
     id = get_next_id_num(hydroponicssheet)

@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "hydroponicssheets",
+  "private_key_id": "8ae54978587bbd1c2bd6088d9d20425e16fef049",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCcVKzHumuy/njd\nn/kgipKTXLxyeFTvgfdb9Pdm+tXEELc+3o1zp80QNLDaVEfrLkJdxvZvYheXkpEm\nM+DrsH8OuntdL/gjQJS4OKp/nzTGxuAf+nEccYc9Lh6kGjGrJ3lgSsXzfymcCMGV\n+Nr7fXUpdE/dIDkOl9KsBgH24s3D4a/41mUJjzFLVq4OrpKsfTMljo96bGqevl5S\n2kZCiU/DJcZsKmkYSpMF6GC1JPnwDNFaunDPu5+DPQE3j28bPwY5cDIZYvmYCbKH\ntDvCOWCa6Y0GcgGcfU1ZRHXuA0IaEh+M34KNt2V63gBlmZeb2WGsnrjoNDwoKGUn\nUmTXzm21AgMBAAECggEAAY9IbOCQQ/FWTDoL79PkY+jZYQpruxZJ3RIBmwi0M9pu\nRQfg02huLXh/9zSIWEzD/r4YbwvEfn1bJajbIXpHdau66e3QKYi716/TVMrq1yqT\nW95RXSdtYiIqFz1VYKtYAoYTUF/k1/Qd1uXsSD5XejDUvgIvSvmNFhqRz+BWjX+Y\ng0ZHUDQWD32GVwA2S1Hg0TpbOTaq0eySkNnh2wUYGFI2xM850biS3LEWu33VATWU\nYEuSV1EsaNzPX3QUhZA3a+l7wOxIWxUlqZ8EZ5/aKBlk6G0CSO5iiCHsFijukzjw\n8qTKTFIusDPPFn5ECFcDmZ2izcN7DjDjbwej39DlAQKBgQDQMBItnjlm1kmg1cb/\n5dlIZJcprZiBCao3B4T2dK4FE8tkxqWMuBmpb/gmHlkT5v+lh4myB82FKsSLWkCo\nXShETIl84pPlXqR+IAu3haMe7CPsjri7aIS7uXmGxVnQLJ/ZEYvQHJr23iU+i50G\nHm8YkILLMga1fTNUu9J+MEjS9QKBgQDAO8m/UA1Bemo+oMcSw3DMLGY+30WqJdgr\nqK0EDge2ajZTfJQ4PJOSVwjI4EssRQFdNLM1dLnNQeZi2zqJ6pnscG8lB8/dYT7h\nGe0w0JgFLvnO9imH4/MvmMqRm9F771BQYFvGJGh+58+wALiEY3HN0CxR8+1UyxWK\nKNsbf8n3wQKBgQDCHyDEIpYZmtRawRtmfzcEtq7w8OqT36Q03bEQcanWGCf+VvAE\n76EWCc7UFFYxJaLZATHWrEnp0wAjhEtn8j1auhc1OLx5Eq/E3zKttFFuwveYW1hL\nf2DM/lwf26MsZn/CUwcQTav9ZxRJZrtK+lPTDuS2fXYeApk7eEsE2Rb+hQKBgHxH\nqx0WohtNC1dGFq4Y0NoPcmL/ckiYgvNm78SJVY8nh8vd5O2erEGWJ0XHTJJoYoNh\nyOKsflsnWc1bsrLri2wDHLgyHr8fWcmqO2Ct2zquri6RkzQZuWVyQLR2qq6Xf7MX\nOP4XF7/EGs/NB33/1Nmc1qp9K1kAmwJhe5aBvY+BAoGAN/9Vhlvmo+JO0kL4pHMz\nhEGh/s9xqP+fXV9okVF6VWK/MniyNeHwhO2z0SrV6s9LZ8wRoyluzByNt9Si+P0p\n9Ab+KcITMn/kpN8bfx1TaHkdK37xo1FmYgVgw+C0uw3u7IWa8ShrdPPBuBk5klE4\nuVYbBY8yJr4qWY6KWmFAPdM=\n-----END PRIVATE KEY-----\n",
+  "client_email": "python2sheet@hydroponicssheets.iam.gserviceaccount.com",
+  "client_id": "111555915195122464579",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/python2sheet%40hydroponicssheets.iam.gserviceaccount.com"
+}

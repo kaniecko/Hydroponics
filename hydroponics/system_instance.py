@@ -1,12 +1,13 @@
 import dbAccess
 import sqlite3
 
-class input: 
-    def __init__(self, id, dateNtime, ph, ppm):
+class system_instance: 
+    def __init__(self, id, dateNtime, ph, ppm, color):
         self._id = id
         self._dateNtime = dateNtime
         self._ph = ph
-        self.ppm = ppm
+        self._ppm = ppm
+	self._color = color
 
     @property
     def id(self):
@@ -24,8 +25,10 @@ class input:
     def ppm(self):
         return self._ppm
 
-    
-    
+    @property
+    def color(self):
+	return self._color
+
     def importNew(dbConn, id, dateNtime, ph, ppm):
         sqlQ = """Insert into dailyReading(EntryNumber, Date, pH, PPM)
                   values((?), (?), (?), (?));"""
@@ -37,7 +40,7 @@ class input:
 
         s = dbAccess.selectOneRow(dbConn, safetyMeasure, [id])
         if s:
-            return 0 
+            return 0
         try:
             dbAccess.performAction(dbConn, sqlQ, [id, dateNtime, ph, ppm])
         except Exception as err:

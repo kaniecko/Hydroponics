@@ -19,7 +19,6 @@ def poll_sensor(channel):
 
 
 def get_ph():
-    print("getting PH...")
     total = 0.0
     count = 6
     try:
@@ -32,9 +31,8 @@ def get_ph():
     except:
         total = -1.0
         count = 1
-        print("An exception has occured")
+        print("An exception has occured in get_ph")
     finally:
         spi.close()
-        print("...Done getting PH")
         return total/count
 

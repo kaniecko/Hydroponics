@@ -7,12 +7,11 @@ import ph_tester
 from datetime import date
 import sqlite3
 
-#THIS IS A TEST
-
 def uploadToDataBase(id, phLevel, PPMLevel):
     dbConn = sqlite3.connect('dailyReading.db')
     now = datetime.datetime.now()
     system_instance.importNew(dbConn, id, now, phLevel, PPMLevel)
+    print("uploaded to database")
 
 print("Starting...")
 x = 0

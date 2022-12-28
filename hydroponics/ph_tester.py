@@ -1,10 +1,6 @@
 import time
 import RPi.GPIO as GPIO
 import spidev
-spi = spidev.SpiDev()
-spi.open(0,0)
-spi.max_speed_hz = 250000
-calibration = 21.25
 
 def poll_sensor(channel):
 	assert 0 <= channel <= 1, 'ADC channel must be 0 or 1'
@@ -19,6 +15,10 @@ def poll_sensor(channel):
 
 
 def get_ph():
+    spi = spidev.SpiDev()
+    spi.open(0,0)
+    spi.max_speed_hz = 250000
+    calibration = 21.25
     total = 0.0
     count = 6
     try:

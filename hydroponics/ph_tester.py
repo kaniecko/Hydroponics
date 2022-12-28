@@ -21,9 +21,9 @@ def poll_sensor(channel):
 def get_ph():
     	print("getting PH...")
     	total = 0.0
-    	count = 6.0
+    	count = 6
     	try:
-		print("ewjc	vyewc")
+		print("before for loop")
 		for x in range(count):
 			print(x)
 			channel = 0
@@ -33,7 +33,7 @@ def get_ph():
 			total = total + ph
 	except:
 		total = -1.0
-		count = 1.0
+		count = 1
 		print("An exception has occured")
     	finally:
 		spi.close()

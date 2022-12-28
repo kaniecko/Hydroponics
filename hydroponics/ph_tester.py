@@ -19,43 +19,19 @@ def poll_sensor(channel):
 
 
 def get_ph():
-    print("getting PH...")
     total = 0.0
     count = 6
     try:
-        print("before for loop")
         for x in range(count):
-            print(x)
             channel = 0
             channeldata = poll_sensor(channel)
             voltage = round(((channeldata * 5000) / 1024),0)
             ph = -5.70 * (voltage / 1000) + calibration
             total = total + ph
-            print("after for loop")
     except:
         total = -1.0
         count = 1
-        print("An exception has occured")
+        print("An exception has occured in get_ph")
     finally:
         spi.close()
-        print("...Done")
         return total/count
-
-
-""" try:
-	while True:
-		channel = 0
-		channeldata = poll_sensor(channel)
-
-		voltage = round(((channeldata * 5000) / 1024),0)
-		print('Voltage  (V): {}'.format(voltage))
-		print('Data	    : {}'.format(channeldata))
-
-		ph = -5.70 * (voltage / 1000) + calibration
-		print("ph          :", f"{ph:.2f}")
-
-		print('\n')
-		time.sleep(1)
-finally:
-	spi.close()
-	print('\n All done') """

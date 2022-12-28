@@ -1,26 +1,28 @@
 
 import time
 import sheet_editor
-import dbObjects
+import system_instance
 import datetime
+import ph_tester
 from datetime import date
 import sqlite3
-
-#THIS IS A TEST
 
 def uploadToDataBase(id, phLevel, PPMLevel):
     dbConn = sqlite3.connect('dailyReading.db')
     now = datetime.datetime.now()
-    dbObjects.importNew(dbConn, id, now, phLevel, PPMLevel)
+    system_instance.importNew(dbConn, id, now, phLevel, PPMLevel)
 
 print("Starting...")
 x = 0
-while x <= 80:
+while x <= 20:
     # id that was on the google sheet
     time.sleep(5)
-    uploadToDataBase(x, 0, 0)
-    id = sheet_editor.push_data(x, -1.0)
-    print("Updated ID#:",id)
+    ph = ph_tester.get_ph()
+    print("the ph retrieved is:",ph)
+    id = sheet_editor.push_data(ph, -1.0)
+    print("sheet updated with id#:",id)
+    uploadToDataBase(id, ph, 0)
+    print("database updated with id#:",id)
     x = x+1
 
 print("Done!")

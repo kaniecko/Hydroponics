@@ -1,0 +1,4 @@
+Internet List: nmcli d wifi list
+
+Connect wifi: nmcli d wifi connect [WIFI NAME] password [PASSWORD]
+

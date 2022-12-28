@@ -33,13 +33,14 @@ def importNew(dbConn, id, dateNtime, ph, ppm):
     sqlQ = """Insert into Readings(EntryNumber, Date, pH, PPM)
                 values((?), (?), (?), (?));"""
 
-    #Tests for if plate is in the database if not returns 0
+    #Tests for if entry number is in the database if it is returns 0
     safetyMeasure = """select EntryNumber
         from Readings
         where EntryNumber = (?);"""
 
     s = dbAccess.selectOneRow(dbConn, safetyMeasure, [id])
     if s:
+        print("found in db")
         return 0
     try:
         dbAccess.performAction(dbConn, sqlQ, [id, dateNtime, ph, ppm])

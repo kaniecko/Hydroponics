@@ -17,25 +17,6 @@ def poll_sensor(channel):
 	r = spi.xfer2([1,cbyte,0])
 	return ((r[1] & 31) << 6) + (r[2] >> 2)
 
-"""
-try:
-	while True:
-		channel = 0
-		channeldata = poll_sensor(channel)
-
-		voltage = round(((channeldata * 5000) / 1024),0)
-		print('Voltage  (V): {}'.format(voltage))
-		print('Data	    : {}'.format(channeldata))
-
-		ph = -5.70 * (voltage / 1000) + calibration
-		print("ph          :", f"{ph:.2f}")
-
-		print('\n')
-		time.sleep(1)
-finally:
-	spi.close()
-	print('\n All done')"""
-
 
 def get_ph():
     	print("getting PH...")
@@ -56,3 +37,23 @@ def get_ph():
 		spi.close()
     	print("...Done")
 	return total/count
+
+
+"""
+try:
+	while True:
+		channel = 0
+		channeldata = poll_sensor(channel)
+
+		voltage = round(((channeldata * 5000) / 1024),0)
+		print('Voltage  (V): {}'.format(voltage))
+		print('Data	    : {}'.format(channeldata))
+
+		ph = -5.70 * (voltage / 1000) + calibration
+		print("ph          :", f"{ph:.2f}")
+
+		print('\n')
+		time.sleep(1)
+finally:
+	spi.close()
+	print('\n All done')"""

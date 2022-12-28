@@ -14,7 +14,7 @@ def uploadToDataBase(id, phLevel, PPMLevel):
 
 print("Starting...")
 x = 0
-while x <= 20:
+while x <= 5:
     # id that was on the google sheet
     time.sleep(5)
     ph = ph_tester.get_ph()

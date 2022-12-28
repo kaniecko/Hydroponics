@@ -23,7 +23,9 @@ def get_ph():
     	total = 0.0
     	count = 6.0
     	try:
+		print("ewjc	vyewc")
 		for x in range(count):
+			print(x)
 			channel = 0
 			channeldata = poll_sensor(channel)
 			voltage = round(((channeldata * 5000) / 1024),0)

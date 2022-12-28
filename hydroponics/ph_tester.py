@@ -2,7 +2,7 @@ import time
 import RPi.GPIO as GPIO
 import spidev
 
-def poll_sensor(channel):
+def poll_sensor(channel, spi):
 	assert 0 <= channel <= 1, 'ADC channel must be 0 or 1'
 
 	if channel:
@@ -24,7 +24,7 @@ def get_ph():
     try:
         for x in range(count):
             channel = 0
-            channeldata = poll_sensor(channel)
+            channeldata = poll_sensor(channel, spi)
             voltage = round(((channeldata * 5000) / 1024),0)
             ph = -5.70 * (voltage / 1000) + calibration
             total = total + ph

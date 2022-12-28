@@ -31,6 +31,7 @@ def get_ph():
 			voltage = round(((channeldata * 5000) / 1024),0)
 			ph = -5.70 * (voltage / 1000) + calibration
 			total = total + ph
+		print("after for loop")
 	except:
 		total = -1.0
 		count = 1

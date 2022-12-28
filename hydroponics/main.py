@@ -11,7 +11,7 @@ import sqlite3
 def uploadToDataBase(id, phLevel, PPMLevel):
     dbConn = sqlite3.connect('dailyReading.db')
     now = datetime.datetime.now()
-    dbObjects.importNew(dbConn, id, phLevel, PPMLevel)
+    dbObjects.importNew(dbConn, id, now, phLevel, PPMLevel)
 
 print("Starting...")
 x = 0

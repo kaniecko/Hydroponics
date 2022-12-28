@@ -18,7 +18,7 @@ while x <= 20:
     # id that was on the google sheet
     time.sleep(5)
     ph = ph_tester.get_ph()
-    print("the ph retrieved is:",ph)
+    print("the ph retrieved is:",f"{ph:.2f}")
     """id = sheet_editor.push_data(ph, -1.0)
     print("sheet updated with id#:",id)
     uploadToDataBase(id, ph, 0)

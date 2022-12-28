@@ -30,12 +30,12 @@ class system_instance:
 	    return self._color
 
 def importNew(dbConn, id, dateNtime, ph, ppm):
-    sqlQ = """Insert into dailyReading(EntryNumber, Date, pH, PPM)
+    sqlQ = """Insert into Readings(EntryNumber, Date, pH, PPM)
                 values((?), (?), (?), (?));"""
 
     #Tests for if plate is in the database if not returns 0
     safetyMeasure = """select EntryNumber
-        from dailyReading
+        from Readings
         where EntryNumber = (?);"""
 
     s = dbAccess.selectOneRow(dbConn, safetyMeasure, [id])

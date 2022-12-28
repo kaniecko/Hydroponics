@@ -19,10 +19,10 @@ while x <= 20:
     time.sleep(5)
     ph = ph_tester.get_ph()
     print("the ph retrieved is:",ph)
-    id = sheet_editor.push_data(ph, -1.0)
+    """id = sheet_editor.push_data(ph, -1.0)
     print("sheet updated with id#:",id)
     uploadToDataBase(id, ph, 0)
-    print("database updated with id#:",id)
+    print("database updated with id#:",id)"""
     x = x+1
 
 print("Done!")

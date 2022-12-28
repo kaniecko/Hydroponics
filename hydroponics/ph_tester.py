@@ -28,10 +28,11 @@ def get_ph():
             voltage = round(((channeldata * 5000) / 1024),0)
             ph = -5.70 * (voltage / 1000) + calibration
             total = total + ph
-    except:
+    except Exception as e:
         total = -1.0
         count = 1
         print("An exception has occured in get_ph")
+        print(e)
     finally:
         spi.close()
         return total/count

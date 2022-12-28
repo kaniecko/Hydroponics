@@ -35,4 +35,3 @@ def get_ph():
     finally:
         spi.close()
         return total/count
-

@@ -14,13 +14,13 @@ def uploadToDataBase(id, phLevel, PPMLevel):
 
 print("Starting...")
 x = 0
-while x <= 5:
+while x <= 10:
     # id that was on the google sheet
-    time.sleep(5)
+    time.sleep(3)
     ph = ph_tester.get_ph()
     print("the ph retrieved is:",f"{ph:.2f}")
-    """id = sheet_editor.push_data(ph, -1.0)
-    print("sheet updated with id#:",id)"""
+    id = sheet_editor.push_data(ph, -1.0)
+    print("sheet updated with id#:",id)
     uploadToDataBase(x, ph, 0)
     print("database updated with id#:",x)
     x = x+1

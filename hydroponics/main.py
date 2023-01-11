@@ -12,14 +12,15 @@ def uploadToDataBase(id, phLevel, PPMLevel):
     system_instance.importNew(dbConn, id, now, phLevel, PPMLevel)
 
 try:
+    hydroponicssheet = sheet_editor.give_sheet_connection()
     while True:
         print("Starting Wait...")
-        time.sleep(1800)
+        time.sleep(5)
         print("Wait is done...")
         ph = ph_tester.get_ph()
         print("the ph retrieved is:",f"{ph:.2f}")
         # id that was on the google sheet
-        id = sheet_editor.push_data(ph, -1.0)
+        id = sheet_editor.push_data(ph, hydroponicssheet)
         print("sheet updated with id#:",id)
         uploadToDataBase(id, ph, 0)
         print("database updated with id#:",id)

@@ -1,7 +1,7 @@
 import time
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
-# hello
+
 def get_next_id_num(hydroponicssheet):
     #.cell(row, column)
     return hydroponicssheet.cell(1,1).value

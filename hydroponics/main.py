@@ -15,7 +15,7 @@ try:
     hydroponicssheet = sheet_editor.give_sheet_connection()
     while True:
         print("Starting Wait...")
-        time.sleep(5)
+        time.sleep(300)
         print("Wait is done...")
         ph = ph_tester.get_ph()
         print("the ph retrieved is:",f"{ph:.2f}")
@@ -26,6 +26,7 @@ try:
         print("database updated with id#:",id)
 except:
     print("There was an error.")
+    time.sleep(600)
 finally:
     print("Done!")
 

@@ -13,19 +13,17 @@ def uploadToDataBase(id, phLevel, PPMLevel):
     system_instance.importNew(dbConn, id, now, phLevel, PPMLevel)
 
 try:
-    x = 0
     while True:
         print("Starting Wait...")
         time.sleep(1800)
+        print("Wait is done...")
         ph = ph_tester.get_ph()
         print("the ph retrieved is:",f"{ph:.2f}")
         # id that was on the google sheet
         id = sheet_editor.push_data(ph, -1.0)
         print("sheet updated with id#:",id)
-        uploadToDataBase(x, ph, 0)
-        print("database updated with id#:",x)
-        x = x+1
-        print("Done uploading data...")
+        uploadToDataBase(id, ph, 0)
+        print("database updated with id#:",id)
 except:
     print("There was an error.")
 finally:
